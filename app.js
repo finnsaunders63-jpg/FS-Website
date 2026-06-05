@@ -9,7 +9,24 @@ themeBtn.addEventListener('click', function () {
   this.textContent = document.body.classList.contains('dark-theme') ? 'Light' : 'Dark';
 });
 
-// ── SPA Router ──
+// ── Skills Dropdown ──
+const skillsToggle = document.getElementById('skillsToggle');
+const skillsBody   = document.getElementById('skillsBody');
+const skillsSection = skillsToggle.closest('.skills-section');
+
+skillsToggle.addEventListener('click', function () {
+  const isOpen = skillsSection.classList.toggle('open');
+  if (isOpen) {
+    skillsBody.style.maxHeight = skillsBody.scrollHeight + 'px';
+    document.querySelectorAll('.skill-bar-fill').forEach(b => {
+      b.style.transition = 'none';
+      b.style.width = b.getAttribute('data-level') + '%';
+    });
+  } else {
+    skillsBody.style.maxHeight = '0';
+  }
+});
+
 const pages = {
   'home':        document.getElementById('page-home'),
   'circular-game-simulator': document.getElementById('page-circular-game-simulator'),

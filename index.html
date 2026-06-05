@@ -20,14 +20,128 @@
       <header class="home-header">
         <div class="header-label">Portfolio</div>
         <h1 class="home-title">Finn's Engineering Projects</h1>
-        <p class="home-sub">A collection of builds, experiments, and hardware adventures.</p>
+        <p class="home-sub">A showcase of engineering projects and builds I have made.</p>
       </header>
+
+      <!-- ── Skills Section ── -->
+      <section class="skills-section">
+        <button class="skills-toggle" id="skillsToggle">
+          <span class="skills-label">Skills &amp; Tools</span>
+          <span class="skills-toggle-arrow">↓</span>
+        </button>
+        <div class="skills-body" id="skillsBody">
+
+        <div class="skill-row">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">Python</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">Data Analysis</span>
+              <span class="skill-tooltip-tag">GUI (Tkinter)</span>
+              <span class="skill-tooltip-tag">APIs</span>
+              <span class="skill-tooltip-tag">Automation</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">MicroPython</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">MicroPython</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">RP2040</span>
+              <span class="skill-tooltip-tag">GPIO</span>
+              <span class="skill-tooltip-tag">I2C / SPI</span>
+              <span class="skill-tooltip-tag">OLED Displays</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">KiCad</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="70"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">KiCad</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">Schematic Design</span>
+              <span class="skill-tooltip-tag">PCB Layout</span>
+              <span class="skill-tooltip-tag">Gerber Export</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Fusion 360</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">Fusion 360</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">Parametric Modelling</span>
+              <span class="skill-tooltip-tag">Assembly</span>
+              <span class="skill-tooltip-tag">Renders</span>
+              <span class="skill-tooltip-tag">Sheet Metal</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Cura / 3D Printing</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">Cura / 3D Printing</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">FDM</span>
+              <span class="skill-tooltip-tag">Slicer Tuning</span>
+              <span class="skill-tooltip-tag">Support Strategy</span>
+              <span class="skill-tooltip-tag">Tolerances</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Soldering / PCB</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">Soldering / PCB</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">Through-Hole</span>
+              <span class="skill-tooltip-tag">SMD</span>
+              <span class="skill-tooltip-tag">Rework</span>
+              <span class="skill-tooltip-tag">Flux & Wick</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Raspberry Pi</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="82"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">Raspberry Pi</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">GPIO</span>
+              <span class="skill-tooltip-tag">Linux</span>
+              <span class="skill-tooltip-tag">ADC (MCP3008)</span>
+              <span class="skill-tooltip-tag">Servo Control</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">VS Code</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div>
+          <div class="skill-tooltip">
+            <div class="skill-tooltip-title">VS Code</div>
+            <div class="skill-tooltip-tags">
+              <span class="skill-tooltip-tag">Extensions</span>
+              <span class="skill-tooltip-tag">Debugging</span>
+              <span class="skill-tooltip-tag">Git Integration</span>
+              <span class="skill-tooltip-tag">Remote SSH</span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
 
       <nav class="project-grid">
         <a class="project-card" data-page="circular-game-simulator" href="#circular-game-simulator">
           <span class="card-num">01</span>
           <span class="card-name">Circular Game Simulator</span>
-          <img src="images/circular_header.jpg"
+          <img src="images/CircularGame/circular_header.jpg"
             alt="Circular Game Simulator"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -35,7 +149,7 @@
         <a class="project-card" data-page="srt" href="#srt">
           <span class="card-num">02</span>
           <span class="card-name">SRT Monitor</span>
-          <img src="images/srt_monitor_header.png"
+          <img src="images/SRTMonitor/srt_monitor_header.png"
             alt="SRT Monitor"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -43,7 +157,7 @@
         <a class="project-card" data-page="pinger" href="#pinger">
           <span class="card-num">03</span>
           <span class="card-name">Remote Pinger</span>
-          <img src="images/pinger_header.jpg"
+          <img src="images/Pinger/pinger_header.jpg"
             alt="Remote Pinger"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -51,7 +165,7 @@
         <a class="project-card" data-page="lipo" href="#lipo">
           <span class="card-num">04</span>
           <span class="card-name">Lipo Charger</span>
-          <img src="images/lipo_header.jpg"
+          <img src="images/LipoCharger/lipo_header.jpg"
             alt="Lipo Charger"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -59,8 +173,8 @@
         <a class="project-card" data-page="spm" href="#spm">
           <span class="card-num">05</span>
           <span class="card-name">Spherical Parallel Manipulator</span>
-          <img src="images/spm_header.jpg"
-            alt="Spherical Parallel Manipulator"
+          <img src="images/SPM/spm_header.jpg"
+            alt="SRT Monitor"
             class="card-image">
           <span class="card-arrow">→</span>
         
@@ -77,37 +191,38 @@
       <div class="project-num">01</div>
       <h2 class="project-title">Circular Game Simulator</h2>
       <div class="project-tag">Game / Interactive</div>
+      
+      <div class="project-details">
+        <div class="detail-block">
+          <div class="detail-label">Status</div>
+          <div class="detail-value">Complete</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Year</div>
+          <div class="detail-value">2026</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Tools</div>
+          <div class="detail-value">PCB Design, Soldering, 3D Printing, Fusion 360, Cura, 3D Printed Circuit Board, RP 2040, Kicad, MicroPython</div>
+        </div>
+      </div>
+
       <div class="project-body">
         <p>Add your project description here. What does it do? What was the goal? What problem does it solve?</p>
         <p>You can describe the mechanics, the tech stack, or the inspiration behind this project.</p>
       </div>
-      <div class="project-details">
-        <div class="detail-block">
-          <div class="detail-label">Status</div>
-          <div class="detail-value">Complete</div>
-        </div>
-        <div class="detail-block">
-          <div class="detail-label">Year</div>
-          <div class="detail-value">2024</div>
-        </div>
-        <div class="detail-block">
-          <div class="detail-label">Tools</div>
-          <div class="detail-value">—</div>
-        </div>
-      </div>
+
+      
     </div>
   </div>
 
-  <div id="page-spm" class="page project-page">
+  <div id="page-srt" class="page project-page">
     <div class="project-layout">
       <a class="back-btn" href="#home">← Back</a>
       <div class="project-num">02</div>
-      <h2 class="project-title">Spherical Parallel Manipulator</h2>
-      <div class="project-tag">Robotics / Mechanical</div>
-      <div class="project-body">
-        <p>Add your project description here. What does it do? What was the goal? What problem does it solve?</p>
-        <p>You can describe the design process, kinematics, fabrication methods, or key challenges.</p>
-      </div>
+      <h2 class="project-title">SRT Monitor</h2>
+      <div class="project-tag">Software / Hardware</div>
+      
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
@@ -115,12 +230,57 @@
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
-          <div class="detail-value">2024</div>
+          <div class="detail-value">2025</div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Tools</div>
-          <div class="detail-value">—</div>
+          <div class="detail-value">VS Code, Python, Magewell API</div>
         </div>
+      </div>
+      <div class="project-body">
+        <p>This application allows you to connect through the Magewell API to a Magewell Ultra Encode SDI and query the statistics of the stream being sent out from the encoder.</p>
+        <p>This then logs it all in a graph and around the GUI, with configurable time durations to show the data and select what data you want to use.</p>
+        <p>When opened as an executable it can be opened multiple times to monitor numerous streams at once.</p>
+        <p>This is coded in Python. Executable can be found on my Github.</p>
+        <p><a href="https://github.com/finnsaunders63-jpg/SRT-Monitor-App" target="_blank">Finn's GitHub</a></p>
+
+      </div>
+      
+      <img src="images/SRTMonitor/Homepage_Annotated.png"
+            alt="SRT Monitor"            
+            class="project-image">
+    </div>
+  </div>
+
+  <div id="page-pinger" class="page project-page">
+    <div class="project-layout">
+      <a class="back-btn" href="#home">← Back</a>
+      <div class="project-num">03</div>
+      <h2 class="project-title">Remote Pinger</h2>
+      <div class="project-tag">Networking / Embedded</div>
+      
+      <div class="project-details">
+        <div class="detail-block">
+          <div class="detail-label">Status</div>
+          <div class="detail-value">Complete</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Year</div>
+          <div class="detail-value">2025</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Tools</div>
+          <div class="detail-value">Waveshare RP2040-ETH, VS Code, TP4056, 3D Printing, Fusion 360, Cura</div>
+        </div>
+      </div>
+
+      <div class="project-body">
+        <p>This is a small networking device that allows you to configure an IP Address and Subnet Mask, then plug into your network and you can ping this device from a remote location using a PC.</p>
+        <p>The device has uses a Waveshare RP2040-ETH board to handle the ethernet connection, drive the OLED display, handle the button presses and reprogram the boards IP and Subnet.</p>
+        <p>It has a 400 mAh battery and is charged using a TP4056 Battery charger. </p>
+        <p>The RP2040-ETH only has a 10Mb connection speed, so will not be able to connect to a switch or PC that cannot handle a 10Mb connection.</p>
+        <p>Future Upgrades:</p>
+        <p>- 100Mb Connection speed<br>- Device that can ping as well as be pinged<br>- Improve 3D prints to fit flush without Blue Tack filler</p>
       </div>
     </div>
   </div>
@@ -128,13 +288,10 @@
   <div id="page-lipo" class="page project-page">
     <div class="project-layout">
       <a class="back-btn" href="#home">← Back</a>
-      <div class="project-num">03</div>
+      <div class="project-num">04</div>
       <h2 class="project-title">Lipo Charger</h2>
       <div class="project-tag">Electronics / PCB</div>
-      <div class="project-body">
-        <p>Add your project description here. What does it do? What was the goal? What problem does it solve?</p>
-        <p>Describe the circuit design, components used, safety features, or any interesting design decisions.</p>
-      </div>
+      
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
@@ -142,53 +299,29 @@
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
-          <div class="detail-value">2024</div>
+          <div class="detail-value">2025</div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Tools</div>
-          <div class="detail-value">—</div>
+          <div class="detail-value">TP4056, 3D Printing, Fusion 360, Cura</div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div id="page-srt" class="page project-page">
-    <div class="project-layout">
-      <a class="back-btn" href="#home">← Back</a>
-      <div class="project-num">04</div>
-      <h2 class="project-title">SRT Monitor</h2>
-      <div class="project-tag">Software / Hardware</div>
       <div class="project-body">
-        <p>Add your project description here. What does it do? What was the goal? What problem does it solve?</p>
-        <p>Explain what SRT is, why you built a monitor for it, and how it works.</p>
-      </div>
-      <div class="project-details">
-        <div class="detail-block">
-          <div class="detail-label">Status</div>
-          <div class="detail-value">Complete</div>
-        </div>
-        <div class="detail-block">
-          <div class="detail-label">Year</div>
-          <div class="detail-value">2024</div>
-        </div>
-        <div class="detail-block">
-          <div class="detail-label">Tools</div>
-          <div class="detail-value">—</div>
-        </div>
+        <p>A small 3D Printed casing to house a TP4056 charging module and screw terminal block to wire into a battery.</p>
+        <p>- Solder the B+ and B- pads on the TP4056 to short wires.<br>- Mark on the terminal what is the positive hole and what is the negative.<br>- Then solder the wires to the connector block ports. Make sure to push the wires under the block first to keep them in place.<br>- Next slide in the TP4056 board and then push in the connector block to fit in the gap nicely and so the legs go under the middle of the centre block.<br>- Then slide the top on and label.</p>
+        <p>Note tolerances are not perfect for the little slide top and required some filing to fit snugly in the case. </p>
       </div>
     </div>
   </div>
 
-  <div id="page-pinger" class="page project-page">
+  <div id="page-spm" class="page project-page">
     <div class="project-layout">
       <a class="back-btn" href="#home">← Back</a>
       <div class="project-num">05</div>
-      <h2 class="project-title">Remote Pinger</h2>
-      <div class="project-tag">Networking / Embedded</div>
-      <div class="project-body">
-        <p>Add your project description here. What does it do? What was the goal? What problem does it solve?</p>
-        <p>Describe the hardware, protocol, range, or any challenges you overcame.</p>
-      </div>
+      <h2 class="project-title">Spherical Parallel Manipulator</h2>
+      <div class="project-tag">Robotics / Mechanical</div>
+      
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
@@ -196,12 +329,39 @@
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
-          <div class="detail-value">2024</div>
+          <div class="detail-value">2021</div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Tools</div>
-          <div class="detail-value">—</div>
+          <div class="detail-value">3D Printing, Raspberry Pi, Servos, MicroPython, Tkinter</div>
         </div>
+      </div>
+
+      <div class="project-body">
+        <p>This Spherical Parallel Manipulator was originally printed with all of the parts from the original model by plusalphaDesigns (See the second last photo). From there changes and alterations were made to improve the build to make it more efficient and suited to my needs, as well as a whole new control system using a Raspberry Pi.</p>
+        <p>What was kept the same:</p>
+        <p>The central gears and all three sets of links were kept the same from the initial build, as no real big changes could be made for these parts without massively changing the designs to put in bearings to help reduce friction. </p>
+        <p>As well as this all of the pins were kept the same.</p>
+        <p>These parts from the original plusalphaDesign build were:</p>
+        <p>- Gear Level 1<br>- Gear Level 2<br>- Gear Level 3<br>- 90deg Link : 3ea<br>- Link Level 1<br>- Link Level 2<br>- Link Level 3<br>- Link Pin : 3ea<br>- Stack Pin<br>- Stage Pin : 3ea</p>
+        <p>Changes</p>
+        <p>The main mechanical changes in the new build were:</p>
+        <p>The use of Nylock nuts to stop the nuts on the joints coming loose that seemed to happen often. </p>
+        <p>The Top Stage was redesigned by measuring the 3D print and 3D modelling one exactly the same size as it to allow it to fit onto the original links. Then a cut was made into it the same size as the camera used in the build to allow it to sit in nicely, with a hole in the bottom to allow the camera to be screwed in. The camera used can be found here. </p>
+        <a href="https://www.amazon.co.uk/gp/product/B07RXYG295/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1" target="_blank">Amazon Link to Camera </a>
+        <p>The original build had a 1:1 gear ratio, in this build this was changed to a 2:1 ratio to improve the torque in the system and allow it to comfortably carry more load. By keeping the central gears the same size and then reducing the diameter of the servo gears from the original 40mm down to 20mm this gear ratio was achieved.</p>
+        <p>With the newly designed base, this made room for some more changes. The large triangular base made the design more sturdy and unlikely to tip, as well as allowing for an arrow on one corner to be made to show which way the base and the system should face. With the new smaller servo gears, the servo mount brackets had to be moved closer to the central gear shaft to allow for this smaller diameter. Some calibration markers also were added, this allowed the servo gears to be set at a zero point and then give an easy visual aid as to where the gear has moved.</p>
+        <p>As well as this, all links that touched eachother had metal washers added to them and were sanded down to try and reduce friction and make the system as smooth as possible</p>
+        <p>Certain parts such as the motor brackets and gears heights were slightly lowered to make the gears all line up more flush to stop any gears getting caught.</p>
+        <p>Electronics </p>
+        <p>All of the electronics were controlled by a Raspberry Pi 4, however a Raspberry Pi 2 or 3 should work perfectly fine for this purpose. The 3 servos were powered from an external power supply. An app on Tkinter was created to control the servos directions and movements as well as relay back real time data on the servo positions. To get this data back into the RPI, an MCP3008 ADC was used to convert the signal from the analog feedback pin of the servo to a digital signal for the RPI to take in. This data was then presented in number format as well as graphically for each servo.</p>
+        <p>The electrical schematic can be seen in the last photo. </p>
+        <p>A video of the system working with the app at the same time can be found here: <a href="https://vimeo.com/726521642" target="_blank">Vimeo Link</a></p>
+        <p>The python code for the Raspberry Pi has been included, a number of libraries seen at the top of the code have to be downloaded. </p>
+        <p>What to print:</p>
+        <p>As well as the things mentioned above from the original build that need printed off, you will also need. </p>
+        <p>- Redesigned Base<br>- Redesigned Top Platform<br>- Calibration Marker : 3ea<br>- Smaller Gear : 3ea</p>
+        
       </div>
     </div>
   </div>
