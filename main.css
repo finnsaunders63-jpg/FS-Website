@@ -87,7 +87,7 @@ body {
 
 .home-left {
   position: sticky;
-  top: 100px;
+  top: 105px;
 }
 
 .home-center {
@@ -98,7 +98,7 @@ body {
 
 .home-right {
   position: sticky;
-  top: 130px;
+  top: 120px;
 }
 .home-header { padding-top: 24px; }
 
