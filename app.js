@@ -17,7 +17,7 @@ const skillsSection = skillsToggle.closest('.skills-section');
 skillsToggle.addEventListener('click', function () {
   const isOpen = skillsSection.classList.toggle('open');
   if (isOpen) {
-    skillsBody.style.maxHeight = skillsBody.scrollHeight + 'px';
+    skillsBody.style.maxHeight = skillsBody.querySelector('.skills-body-inner').scrollHeight + 'px';
     document.querySelectorAll('.skill-bar-fill').forEach(b => {
       b.style.transition = 'none';
       b.style.width = b.getAttribute('data-level') + '%';
@@ -60,4 +60,21 @@ document.addEventListener('click', function (e) {
   const hash = link.getAttribute('href').replace('#', '') || 'home';
   history.pushState(null, '', '#' + hash);
   showPage(hash);
+});
+
+// Start skills open on load
+skillsBody.style.maxHeight = skillsBody.querySelector('.skills-body-inner').scrollHeight + 'px';
+document.querySelectorAll('.skill-bar-fill').forEach(b => {
+  b.style.width = b.getAttribute('data-level') + '%';
+});
+
+// ── Skill tooltip positioning ──
+document.querySelectorAll('.skill-row').forEach(row => {
+  row.addEventListener('mouseenter', function () {
+    const tooltip = this.querySelector('.skill-tooltip');
+    if (!tooltip) return;
+    const rect = this.getBoundingClientRect();
+    tooltip.style.left = (rect.right + 12) + 'px';
+    tooltip.style.top  = (rect.top + rect.height / 2) + 'px';
+  });
 });
