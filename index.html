@@ -51,7 +51,7 @@
 
       <div class="home-center">
         <header class="home-header">
-          <div class="header-label">Portfolio</div>
+          <div class="header-label">Engineering Portfolio</div>
           <h1 class="home-title">Finn's Engineering Projects</h1>
           <p class="home-sub">A showcase of engineering projects, built and designed by me over the years.</p>
         </header>
@@ -59,7 +59,7 @@
           <a class="project-card" data-page="circular-game-simulator" href="#circular-game-simulator">
           <span class="card-num">01</span>
           <span class="card-name">Circular Game Simulator</span>
-          <img src="images/CircularGame/circular_header.jpg"
+          <img src="images/CircularGame/circular_header.webp"
             alt="Circular Game Simulator"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -67,7 +67,7 @@
         <a class="project-card" data-page="srt" href="#srt">
           <span class="card-num">02</span>
           <span class="card-name">SRT Monitor</span>
-          <img src="images/SRTMonitor/srt_monitor_header.png"
+          <img src="images/SRTMonitor/srt_monitor_header.webp"
             alt="SRT Monitor"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -75,7 +75,7 @@
         <a class="project-card" data-page="pinger" href="#pinger">
           <span class="card-num">03</span>
           <span class="card-name">Remote Pinger</span>
-          <img src="images/Pinger/pinger_header.jpg"
+          <img src="images/Pinger/pinger_header.webp"
             alt="Remote Pinger"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -83,7 +83,7 @@
         <a class="project-card" data-page="lipo" href="#lipo">
           <span class="card-num">04</span>
           <span class="card-name">Lipo Charger</span>
-          <img src="images/LipoCharger/lipo_header.jpg"
+          <img src="images/LipoCharger/lipo_header.webp"
             alt="Lipo Charger"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -91,7 +91,7 @@
         <a class="project-card" data-page="spm" href="#spm">
           <span class="card-num">05</span>
           <span class="card-name">Spherical Parallel Manipulator</span>
-          <img src="images/SPM/spm_header.jpg"
+          <img src="images/SPM/spm_header.webp"
             alt="SRT Monitor"
             class="card-image">
           <span class="card-arrow">→</span>
@@ -204,7 +204,7 @@
               <div class="skill-bar-track"><div class="skill-bar-fill" data-level="55"></div></div>
               <div class="skill-tooltip">
                 <div class="skill-tooltip-title">Video Editing</div>
-                <div class="skill-tooltip-tags"></div>
+                <div class="skill-tooltip-tags">
                   <span class="skill-tooltip-tag">DaVinci Resolve</span>
                   <span class="skill-tooltip-tag">Color Grading</span>
                   <span class="skill-tooltip-tag">Travel Videos</span>
@@ -229,26 +229,89 @@
       <a class="back-btn" href="#home">← Back</a>
       <div class="project-num">01</div>
       <h2 class="project-title">Circular Game Simulator</h2>
-      <div class="project-tag">Game / Interactive</div>
+      <div class="project-tag">Gaming</div>
       
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
-          <div class="detail-value">Complete</div>
+          <div class="detail-value"><span class="status-badge status-progress">In Progress</span></div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
           <div class="detail-value">2026</div>
         </div>
         <div class="detail-block">
-          <div class="detail-label">Tools</div>
-          <div class="detail-value">PCB Design, Soldering, 3D Printing, Fusion 360, Cura, 3D Printed Circuit Board, RP 2040, Kicad, MicroPython</div>
+          <div class="detail-label">Tools & Hardware</div>
+          <div class="detail-value">PCB Design, Kicad, 3D Printing, Fusion 360, Cura, 3D Printed Circuit Board, RP 2040, MicroPython, SPI, Soldering</div>
         </div>
       </div>
 
       <div class="project-body">
-        <p>Add your project description here. What does it do? What was the goal? What problem does it solve?</p>
-        <p>You can describe the mechanics, the tech stack, or the inspiration behind this project.</p>
+        <span class="project-titles">Why:</span>
+        <p><br>This handheld game simulator was an excuse to create a 3D printed circuit board from a video seen <a href="https://www.youtube.com/shorts/O7aimMbIAvA" target="_blank">online</a>, to explore the world of PCB Design.</p>
+        <p>I had a few thumbsticks lying around from taking apart an old MOGA Gaming Controller for an iPhone. I also had some circular OLED displays lying around that I though would work well for this project.</p>
+        
+        <span class="project-titles"><br><br>How:</span>
+        <p><br>I took inspiration from one of the small handheld retro games consoles I have seen online. I used a 1.28" Circular OLED Display with a GC9A01 IC that I had lying around as the focus point for this project. </p>
+        <p>I quickly got to grips with how the GC9A01 chip worked with a microcontroller and connected using SPI to run a quick test that I could display a dot in the middle of the screen and that I could change the colour of that dot with a button to show the display changing. Next I connected the MOGA Thumbstick and read in the X and Y values and used that to move the dot around the screen. </p>
+        <p>Once I had all of the basic components working I went to KiCad to create a circuit schematic on there, connecting all of the relevent pins on the microcontroller to the components. I then turned the schematic into a PCB layout, having to create a few components and download a few more from the internet. Once my sinle layer PCB design was done. I was able to export this into Fusion 360, then extrude all of the traces up slightly. </p>
+        <p>Once I had the 3D printable STL file ready I printed this off, once printed I placed it down and applied the thin copper tape to the whole top layer over the extruded traces. With this in place and covering the whole PCB I used a very sharp knife to cut downt he sides of each of the extruded traces, creating a thin copper layer on each of the extruded traces only. Then I poked holes where all of the components were going, using the end of a pair of tweesers.</p>
+        <p>Once all holes were created I placed all of the components in one by one and soldered them down to the copper traces. I then soldered wires across the last few components to connect ground. After diagnosing a few dodgy connections, the whole PCB was working and I then created a case to house the PCB and the hardware was completed. </p>
+        <p>Using Claude I quickly created a set of 3 games to use on the device, Pong, Maze and Brickbreaker. These games are very quick prototypes and I am still working on optimising them to work perfectly.</p>
+        
+        <span class="project-titles"><br><br>What I learned:</span>
+        <p><br>The largest thing I learnt on this project was KiCad and creating PCB layouts. During this I learnt how to create a schematic on KiCad, how to ensure I had through-hole components selected, creating compononets in KiCad ensuring I had the correct dimensions, the importanace of trace width, downloading Gerber files and importing into Fusion 360. </p>
+        <p>Outside of KiCad I also enforced my knowledge on SPI and communicating to graphical displays, ensuring I connect to the correct MOSI and MISO pins on the microcontroller.</p>
+        
+        <span class="project-titles"><br><br>What to improve for next time:</span>
+        <p><br>As this project is still ongoing, there is still plenty of work to be done on the software, so I will update on that at a later date. </p>
+        <p>In terms of Hardware, I was quite happy with most of it came out, I would like to redo the casing to get that to fit perfectly around the circular display, I had issues getting perfect measurements on that and its posisiton, leading to a bunch of soldering needed to be done. <br>As well as this I would like to work on making the PCB event more compact and pusht that to its limits as it just feels slightly too big.</p>
+      </div>
+
+      <div class="side-images side-left">
+        <figure class="side-figure" style="--top: 160px; --w: 380px; --x: -20px;">
+          <img src="images/CircularGame/circular_header.webp" alt="...">
+          <figcaption>Circular Game Simulator</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 500px; --w: 180px; --x: -220px;">
+          <img src="images/CircularGame/Screen1.webp" alt="...">
+          <figcaption>GC9A01 Front</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 502px; --w: 180px; --x: -20px;">
+          <img src="images/CircularGame/Screen2.webp" alt="...">
+          <figcaption>GC9A01 Back</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 810px; --w: 300px; --x: -50px;">
+          <img src="images/CircularGame/PCB.webp" alt="...">
+          <figcaption>3D Printed PCB</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1240px; --w: 250px; --x: -75px;">
+          <img src="images/CircularGame/Home.webp" alt="...">
+          <figcaption>Home Screen</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1670px; --w: 250px; --x: -75px;">
+          <img src="images/CircularGame/BrickBreaker.webp" alt="...">
+          <figcaption>Brick Breaker Game</figcaption>
+        </figure>
+      </div>
+
+      <div class="side-images side-right">
+        <figure class="side-figure" style="--top: 180px; --w: 280px; --x: 30px;">
+          <img src="images/CircularGame/Insides.webp" alt="...">
+          <figcaption>Under the Screen</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 680px; --w: 280px; --x: 30px;">
+          <img src="images/CircularGame/Battery.webp" alt="...">
+          <figcaption>Battery and Charging Circuit</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1150px; --w: 280px; --x: 30px;">
+          <img src="images/CircularGame/Pong.webp" alt="...">
+          <figcaption>Pong Game</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1580px; --w: 280px; --x: 30px;">
+          <img src="images/CircularGame/Maze.webp" alt="...">
+          <figcaption>Maze Game</figcaption>
+        </figure>
       </div>
 
       
@@ -260,32 +323,75 @@
       <a class="back-btn" href="#home">← Back</a>
       <div class="project-num">02</div>
       <h2 class="project-title">SRT Monitor</h2>
-      <div class="project-tag">Software / Hardware</div>
+      <div class="project-tag">Software</div>
       
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
-          <div class="detail-value">Complete</div>
+          <div class="detail-value"><span class="status-badge status-complete">Complete</span></div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
           <div class="detail-value">2025</div>
         </div>
         <div class="detail-block">
-          <div class="detail-label">Tools</div>
-          <div class="detail-value">VS Code, Python, Magewell API</div>
+          <div class="detail-label">Tools & Hardware</div>
+          <div class="detail-value">VS Code, Python, Tkinter, Magewell API</div>
         </div>
       </div>
       <div class="project-body">
-        <p>This application allows you to connect through the Magewell API to a Magewell Ultra Encode SDI and query the statistics of the stream being sent out from the encoder.</p>
-        <p>This then logs it all in a graph and around the GUI, with configurable time durations to show the data and select what data you want to use.</p>
-        <p>When opened as an executable it can be opened multiple times to monitor numerous streams at once.</p>
-        <p>This is coded in Python. Executable can be found on my Github.</p>
+        <span class="project-titles">Why:</span>
+        <p><br>While using the Magewell Ultra Encode SDI, I wanted a way to track key metrics of the stream coming from the senders side and log them into graphs over time. <br>This will allow the sender to ensure the stream is being sent out of their network stably to help find the route cause of connection issues. </p>
+        <span class="project-titles">How:</span>
+        <p><br>The majority of the Tkinter layouts, lables, app design, was done by me in Python, using Youtube videos, code I had already written and examples I had read online. <br>Then the bulk of the code to connect to the encoders API and pull the data and store it was done using Claude Code. </p>
+        <p>To start I created a very basic Tkinter window with a few labels to show the IP address of the encoder that was hardcoded in at this point. As well as a few small pieces of data available from the API such as CPU temp and the name of the stream and the bitrate it was outputting.</p>
+        <p>Using Claude to help me log in to the encoder and pull the data I wanted from the API, I stored this in a json file that I then read from and displayed on labels in the Tkinter window.</p>
+        <p>Once I had the basic function of connecting to an encoder and pulling the data in it was a fairly simple job of going through the API data sheet from Magewell and deciding what data I wanted to collect. This all then got placed in a list in a JSON file and then for the data that was just a text variable that constantly updated to show the latest value on the label that check over every second or so.</p>
+        <p>Then I had worked on placing all of the labels around on the window to create a good looking app with information clustered together nicely.</p>
+        <p>The next big task was the main graph, this would display the historical data over adjustable periods fo time ranging from 1 min to 12 hours. I took some code from my Spherical Parallel Manipulator project I worked on while at University that pulled in servo positions and logged them in a graph.</p>
+        <p>Using this I was able to create the basic graph with Axes and labels using the Matplotlib library, then with a bit of tweaking and help from Claude I got it to start plotting a line for the bitrate of a stream on an encoder, updating once a second.</p>
+        <p>Then I expanded the graph to have 4 different lines being plotted for Bitrate, TTL, Buffer and Target Bitrate, all customisable to be able to display them or not at the tick of a button. By doing this I introduced extra units of measure as Bitrate and Target bitrate was in Mbps where as TTL and buffere was in milliseconds, so I had to add in an extra Y axis on the far side to display that data corretly.</p>
+        <p>Then once this worked the core functionality was all there and I had to add in some minor cosmetic tweaks such as an adjustable slider for the Y axis, adjustable X axis measurements from 1 min up to 12 hours, and text changing colour based on changes in the encoder.</p>
+        <p>Once all of these were done I implemented a home screen that allowed you to input the Username, Password and IP address of the encoder you were trying to connect to as it was still currently hardcoded to the test encoder, once this worked and the encoder log in pulled the entry field values, some error messages were added to the log in screen to tell you if there were errors logging in connecting to the encoder.</p>
+        <p>I then converted it all into a single exe file with custom logos on the toolbar and app and sent it out to be used by the team.</p>
+        <span class="project-titles">What I learned:</span>
+        <p><br>During this build the main area I learnt about was API requests. I had to learn how to connect to the Magewell Encoders and use GET requests to pull the data in.</p>
+        <p>On top of this I continued to keep learning Python and Tkinter for making GUIs. Work that had been started during the Spherical Parallel Manipulator Project. A lot of the graphing and Tkinter code was taken from that project and reused here as there were a lot of similarities.</p>
+        <span class="project-titles">What to improve for next time:</span>
+        <p><br>Currently I am wokring alongside another coworker to create a similar application that is a more fit for purpose solution for our needs at work, taking in a lot of the data collected from this app and placing it in the new app.</p>
+        <p>In terms of functionality in this app, it works fairly well, with no major blips, however due to the limitations of Tkinter there is only so much that can be done to improve the look of the app. It looks very outdated and could do with a makeover. To do this I would look at using something like CustomTkinter as a start to improve the look of it.</p>
+        <p>In future I would then probably look at upgrading this app to use C++ for a more professional look, better performance and more features.</p>
         <p><a href="https://github.com/finnsaunders63-jpg/SRT-Monitor-App" target="_blank">Finn's GitHub</a></p>
 
       </div>
-      
-      <img src="images/SRTMonitor/Homepage_Annotated.png"
+
+      <div class="side-images side-left">
+        <figure class="side-figure" style="--top: 460px; --w: 480px; --x: 20px;">
+          <img src="images/SRTMonitor/Homepage.webp" alt="...">
+          <figcaption>SRT Monitor Homepage</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 960px; --w: 480px; --x: 30px;">
+          <img src="images/SRTMonitor/Login Page.webp" alt="...">
+          <figcaption>SRT Monitor Login Page</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1560px; --w: 480px; --x: 30px;">
+          <img src="images/SRTMonitor/Login Page Error.webp" alt="...">
+          <figcaption>SRT Monitor Login Page Error Messages</figcaption>
+        </figure>
+      </div>
+
+      <div class="side-images side-right">
+        <figure class="side-figure" style="--top: 660px; --w: 480px; --x: -20px;">
+          <img src="images/SRTMonitor/Homepage Clean.webp" alt="...">
+          <figcaption>SRT Monitor All Features</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1260px; --w: 480px; --x: -20px;">
+          <img src="images/SRTMonitor/Homepage Disconnected.webp" alt="...">
+          <figcaption>SRT Monitor Disconnected Stream</figcaption>
+        </figure>
+      </div>
+
+      <img src="images/SRTMonitor/Homepage Annotated.webp"
             alt="SRT Monitor"            
             class="project-image">
     </div>
@@ -296,31 +402,99 @@
       <a class="back-btn" href="#home">← Back</a>
       <div class="project-num">03</div>
       <h2 class="project-title">Remote Pinger</h2>
-      <div class="project-tag">Networking / Embedded</div>
+      <div class="project-tag">Networking</div>
       
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
-          <div class="detail-value">Complete</div>
+          <div class="detail-value"><span class="status-badge status-complete">Complete</span></div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
           <div class="detail-value">2025</div>
         </div>
         <div class="detail-block">
-          <div class="detail-label">Tools</div>
+          <div class="detail-label">Tools & Hardware</div>
           <div class="detail-value">Waveshare RP2040-ETH, VS Code, TP4056, 3D Printing, Fusion 360, Cura</div>
         </div>
       </div>
 
       <div class="project-body">
-        <p>This is a small networking device that allows you to configure an IP Address and Subnet Mask, then plug into your network and you can ping this device from a remote location using a PC.</p>
-        <p>The device has uses a Waveshare RP2040-ETH board to handle the ethernet connection, drive the OLED display, handle the button presses and reprogram the boards IP and Subnet.</p>
-        <p>It has a 400 mAh battery and is charged using a TP4056 Battery charger. </p>
-        <p>The RP2040-ETH only has a 10Mb connection speed, so will not be able to connect to a switch or PC that cannot handle a 10Mb connection.</p>
-        <p>Future Upgrades:</p>
-        <p>- 100Mb Connection speed<br>- Device that can ping as well as be pinged<br>- Improve 3D prints to fit flush without Blue Tack filler</p>
+        <span class="project-titles"><br><br>Why:</span>
+        <p><br>In my work I do a lot of networking tasks and needed a simple way to test connectivity from remote locations. Previously I would have to plug a laptop into the network and leave it in a remote location often outdoors in the elements. This was far from ideal, so I started looking at making a smaller programable on the fly device that would let me alter the devices IP.   </p>
+        <span class="project-titles"><br><br>How:</span>
+        <p><br>I used a Waveshare RP2040-ETH board that I had lying around. This board has a RJ45 port integrated onto the board already with a built in Ethernet controller, simplifying the build massively. The basic design was the RP2040 board being powered from a TP4056 battery module, with a 400mAh battery. Then there were an assortment of buttons and a screen to display the IP and control the UI.</p>
+        <p>I used a 0.28 inch OLED display powered from the RP2040 to create and interactive UI. This used a simple I2C connection to display the how the device was currently configured. Then using a maze of if and else statements I was able to create a mini display with a Home Screen, set IP Screen and set Subnet Screen.</p>
+        <p>Using a piece of Perma Proto Board, I added 4 buttons in an up, down, left and right configuration, as well as 2 more as OK and Home buttons. The OLED Screen was connected to this board, as was an on and off switch. </p>
+        <p>After wiring up all of the buttons to the RP2040, the battery to the TP4056 and the OLED to the RP2040, I designed the housing for all of this in Fusion 360. The design was made in 3 parts, the botton, the main body and the top cover. The bottom has a large square hole to store the battery as well as a square hole in the side plate for the RJ45 connector to poke through. The Main body case has holes for the USB C ports for the TP4056 charging port and the USBC port for the RP2040 for reprogramming in future. The top cover then has holes for the screen to poke through as well as so buttons can added and protude through the top of the cover to make them easier to press.</p>
+        <p>The buttons were then just 3D Printed as small cylinders with large bases that could poke through the top cover from below and sit nicely on top of the buttons so they pressed nicely and didn't come off. After a bit of sanding and filing, everything fit in place ok and then threaded inserts were added  to pieces to allow all 3 of the pieces to be screwed together nicely.</p>
+        <span class="project-titles"><br><br>What I learned:</span>
+        <p><br>During this build I learnt about I2C displays and how to interface with them. A lot of this was me trying to figure out how to create an interface with multiple pages and how to navigate them with minimal buttons. I used a large combination of if and else statements to get this display to work as I hoped. This method worked ok for my small display with only a handful of buttons and pages for the display. However scaling this up would be abit of a nightmare to manage. So in future for larger projects I will look to find another method to do this. </p>
+        <p>I also learnt about buttons and how they will often bounce when in a system like this and the need for a debouncing system to avoid false readings. For my system I used polling delays and edge detection latches to catch any bouncing or double presses to avoing an annoying user experience.</p>
+        <span class="project-titles"><br><br>What to improve for next time:</span>
+        <p><br>There are a few features and changes that I would make for the next iteration: <br> 1. I would use a different MCU board or a separate Ethernet controller. This is because the RP2040-ETH has a maximum connection speed of 10Mbps. A lot of 10G switches that I have used will not connect to a 10Mbps connection. Therefore looking at upgrading this speed to 100Mbps would allow me to connect to all switches I currently use with no issue. Better yet a 1Gbps Ethernet controller would allow me to ensure all cable connections to the end devices we use are running at 1Gbps as this is a common issue I see, with cables being run that only work at 100Mbps.</p>
+        <p>- 100Mb Connection speed<br>- Device that can ping as well as be pinged<br>- Improve 3D prints to fit flush without Blue Tack filler <br> - Use 1 USBC port instead of 2</p>
       </div>
+
+      <div class="side-images side-left">
+        <figure class="side-figure" style="--top: 120px; --w: 380px; --x: -20px;">
+          <img src="images/Pinger/Pinger 1.webp" alt="...">
+          <figcaption>Pinger Front</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 450px; --w: 380px; --x: -20px;">
+          <img src="images/Pinger/Pinger 2.webp" alt="...">
+          <figcaption>Pinger Top and Side</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 780px; --w: 380px; --x: -20px;">
+          <img src="images/Pinger/Pinger 3.webp" alt="...">
+          <figcaption>Pinger Top</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1110px; --w: 380px; --x: -20px;">
+          <img src="images/Pinger/Pinger 4.webp" alt="...">
+          <figcaption>Pinger Side</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1440px; --w: 380px; --x: -20px;">
+          <img src="images/Pinger/Pinger 5.webp" alt="...">
+          <figcaption>Pinger Charging</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1780px; --w: 380px; --x: -20px;">
+          <img src="images/Pinger/Pinger 6.webp" alt="...">
+          <figcaption>Pinger RJ45 Port</figcaption>
+        </figure>
+      </div>
+
+      <div class="side-images side-right">
+        <figure class="side-figure" style="--top: 120px; --w: 380px; --x: 10px;">
+          <img src="images/Pinger/Pinger Home.webp" alt="...">
+          <figcaption>Pinger Home Screen</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 450px; --w: 380px; --x: 10px;">
+          <img src="images/Pinger/Pinger Set IP.webp" alt="...">
+          <figcaption>Pinger Set IP Screen</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 780px; --w: 380px; --x: 10px;">
+          <img src="images/Pinger/Pinger Set Subnet.webp" alt="...">
+          <figcaption>Pinger Set Subnet Screen</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1110px; --w: 380px; --x: 10px;">
+          <img src="images/Pinger/Pinger Insides 2.webp" alt="...">
+          <figcaption>Pinger Charging and Battery Circuit</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1440px; --w: 380px; --x: 10px;">
+          <img src="images/Pinger/Pinger Insides 3.webp" alt="...">
+          <figcaption>Pinger Wiring</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1780px; --w: 380px; --x: 10px;">
+          <img src="images/Pinger/Pinger Insides 4.webp" alt="...">
+          <figcaption>Pinger Top Interface Board</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 2140px; --w: 780px; --x: -900px;">
+          <img src="images/Pinger/Annotated Pinger.webp" alt="...">
+          <figcaption>Annotated Pinger Image</figcaption>
+        </figure>
+      </div>
+
+
     </div>
   </div>
 
@@ -329,28 +503,89 @@
       <a class="back-btn" href="#home">← Back</a>
       <div class="project-num">04</div>
       <h2 class="project-title">Lipo Charger</h2>
-      <div class="project-tag">Electronics / PCB</div>
+      <div class="project-tag">Electronics</div>
       
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
-          <div class="detail-value">Complete</div>
+          <div class="detail-value"><span class="status-badge status-complete">Complete</span></div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
           <div class="detail-value">2025</div>
         </div>
         <div class="detail-block">
-          <div class="detail-label">Tools</div>
+          <div class="detail-label">Tools & Hardware</div>
           <div class="detail-value">TP4056, 3D Printing, Fusion 360, Cura</div>
         </div>
       </div>
 
       <div class="project-body">
-        <p>A small 3D Printed casing to house a TP4056 charging module and screw terminal block to wire into a battery.</p>
-        <p>- Solder the B+ and B- pads on the TP4056 to short wires.<br>- Mark on the terminal what is the positive hole and what is the negative.<br>- Then solder the wires to the connector block ports. Make sure to push the wires under the block first to keep them in place.<br>- Next slide in the TP4056 board and then push in the connector block to fit in the gap nicely and so the legs go under the middle of the centre block.<br>- Then slide the top on and label.</p>
-        <p>Note tolerances are not perfect for the little slide top and required some filing to fit snugly in the case. </p>
+        <span class="project-titles">Why:</span>
+        <p><br>When recycling old lithium-ion batteries from old devices I had lying around I had an issue that I had nothing to charge each of these batteries with. <br>I had multiple TP4056 modules lying around from a previous bulk order, allowing me to use a USB Cable to charge all of my reclaimed batteries.</p>
+        <span class="project-titles">How:</span>
+        <p><br>With the circuit being so simple, there was no need for a real test as I have used these modules in other projects before. All that was needed was a 3D design for the housing of the board as well as figuring out a way to easily connect and disconnect the assorted batteries from the board. I had a box of screw in connector blocks lying around which would provide me with an easy way to screw in the exposed wires of the batteries or connect jumper wires into battery connectors to the board.</p>
+        <p>With the dimensions of the connector block taken, I designed a 3D model of a casing in Fusion 360 and printed it out on my Ender 3 Pro 3D Printer. The design was made to ensure the connector block would just press fit in and stay in place.</p>
+        <p>The design was made out of white PLA filament allowing the charing and fully charged lights to shine through the print</p>
+        <p>Wires were then soldered from the legs of the connector block to the B+ and B- pads on the TP4056. After a quick check and seeing all the pieces work and the batteries were charging correctly I put it in the casing and with a little bit of shaving down pieces I got it all to fit in and labeled the pins of the connector block with + and -.</p>
+        <span class="project-titles">What I learned:</span>
+        <p><br>During this project I learnt about 3D printing tolerances and how to get something to press fit and what gaps I needed to leave to get a tight fit on my 3D printer.</p>
+        <p>Aswell as this I learnt about how small a gap I can leave before the print gets too thin and breaks, this was seen when making the top casing of the 3D print, this cracked as the rails were too thin.</p>
+        <span class="project-titles">What to improve for next time:</span>
+        <p><br>Next time I would improve the design of the top of the casing and the rails to have thicker plastic as in this version they cracked and did not fit in perfectly and required a lot of filing to make them slot in nicely.<br>Aswell as this I would like to integrate in a standard 2.0mm JST-PH connector to the board to allow me to plug these lipos I use in my small projects directly in without having extension cables or to cut and strip the ends. </p>
       </div>
+
+      <div class="side-images side-left">
+        <figure class="side-figure" style="--top: 120px; --w: 380px; --x: -20px;">
+          <img src="images/LipoCharger/Lipo Charger 1.webp" alt="...">
+          <figcaption>Lipo Charger Terminals</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 450px; --w: 380px; --x: -20px;">
+          <img src="images/LipoCharger/Lipo Charger 2.webp" alt="...">
+          <figcaption>Lipo Charger USB C Charging Port</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 780px; --w: 380px; --x: -20px;">
+          <img src="images/LipoCharger/Charging 1.webp" alt="...">
+          <figcaption>Battery Charging</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1110px; --w: 380px; --x: -20px;">
+          <img src="images/LipoCharger/Charging 2.webp" alt="...">
+          <figcaption>Lipo Charger Charging Light</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1440px; --w: 380px; --x: -20px;">
+          <img src="images/LipoCharger/Charging 3.webp" alt="...">
+          <figcaption>Lipo Charger Charging Light</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1500px; --w: 680px; --x: 800px;">
+          <img src="images/LipoCharger/Fully Charged.webp" alt="...">
+          <figcaption>Lipo Charger Fully Charged</figcaption>
+        </figure>
+      </div>
+
+      <div class="side-images side-right">
+        <figure class="side-figure" style="--top: 120px; --w: 380px; --x: 10px;">
+          <img src="images/LipoCharger/Insides 1.webp" alt="...">
+          <figcaption>Lipo Charger Insides</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 450px; --w: 380px; --x: 10px;">
+          <img src="images/LipoCharger/Insides 2.webp" alt="...">
+          <figcaption>Lipo Charger TP4056 Module</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 780px ; --w: 380px; --x: 10px;">
+          <img src="images/LipoCharger/Insides 3.webp" alt="...">
+          <figcaption>Lipo Charger Terminals</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1110px; --w: 380px; --x: 10px;">
+          <img src="images/LipoCharger/Insides 4.webp" alt="...">
+          <figcaption>Lipo Charger Top View</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1440px; --w: 380px; --x: 10px;">
+          <img src="images/LipoCharger/Insides 5.webp" alt="...">
+          <figcaption>Lipo Charger Side View</figcaption>
+        </figure>
+      </div>
+
+
     </div>
   </div>
 
@@ -359,25 +594,55 @@
       <a class="back-btn" href="#home">← Back</a>
       <div class="project-num">05</div>
       <h2 class="project-title">Spherical Parallel Manipulator</h2>
-      <div class="project-tag">Robotics / Mechanical</div>
+      <div class="project-tag">Robotics</div>
       
       <div class="project-details">
         <div class="detail-block">
           <div class="detail-label">Status</div>
-          <div class="detail-value">Complete</div>
+          <div class="detail-value"><span class="status-badge status-complete">Complete</span></div>
         </div>
         <div class="detail-block">
           <div class="detail-label">Year</div>
           <div class="detail-value">2021</div>
         </div>
         <div class="detail-block">
-          <div class="detail-label">Tools</div>
+          <div class="detail-label">Tools & Hardware</div>
           <div class="detail-value">3D Printing, Raspberry Pi, Servos, MicroPython, Tkinter</div>
         </div>
       </div>
 
       <div class="project-body">
-        <p>This Spherical Parallel Manipulator was originally printed with all of the parts from the original model by plusalphaDesigns (See the second last photo). From there changes and alterations were made to improve the build to make it more efficient and suited to my needs, as well as a whole new control system using a Raspberry Pi.</p>
+        <span class="project-titles">Why:</span>
+        <p><br>This project was done as my final year engineering project while at University. The goal of this project was to solve a real world problem in the live officiating of tennis where cameras used down by the court that look down the service T and baselines to check for foot faults, are regularly knocked out of position whether by balls, ballboys, players or other officials on the court. The remote operation of tennis often makes it difficult to be able to go courtside to fix all of these knocked cameras across up to 20 courts. </p>
+        <p>To solve this issue, as all courts have a network connection to these IP cameras, using a small device that can be remotely controlled over IP to pan an tilt back into position.</p>
+        <p>Due to the University needing this to be more complicated than a simple pan and tilt system, the system was altered to include a roll axis, and therefore the Spherical Parallel Maniputlator design was chosen.</p>
+        <span class="project-titles">How:</span>
+        <p><br>The system was made up of 3 main components, The mechanical Spherical Parallel Manipulator design, the RaspberryPi to power and control the system as well as to connect to over VNC to access the control app, and the control app itself coded in Python using Tkinter.</p>
+        <p>Mechanical System</p>
+        <p>A spherical parallel manipulator system was found on Thingiverse by a designer named plusalphaDesigns. This was then remixed from their design to fit my needs.  </p>
+        <p>The Spherical Parallel Manipulator has 3 central gears that spin independently to control each arm, a base plate that could hold a cetnral pin for these gears as well as mountings for each of the 9g servos was designed using solid works and 3D printed. Along with the central gears, arms and pins that were taken from plusalphaDesigns model.</p>
+        <p>Following this a driver gear had to be attached to the servos to drive the central gears with enough of a gear ratio to provide the torque to drive the central gears. This again was created using SolidWorks and then 3D printed and attatched to the top of a shaved down servo horn.</p>
+        <p>Raspberry Pi System</p>
+        <p>I wanted the Raspberry Pi to sit in a remote location and be accessed via VNC. So after booting up the Pi and installing Debian, I installed VNC to the Pi and set a static IP fon it. I was then able to plug it into a network switch and access it over the network from my PC for remote control.</p>
+        <p>Control App</p>
+        <p>To control the SPM, I used a MicroPython app to send commands to the servos to move them around. I used Tkinter to create a GUI that I could press buttons on to move the servos a little bit at a time to make the SPM move up, down, left right and tilt in each direction.</p>
+        
+        <span class="project-titles">What I learned:</span>
+        <p><br> A larger part of this project was improving my CAD skills, I had to take an original build and modify the parts I needed to work differently including the base, camera holder at the top and gears. <br>This was also the first project where I used a Raspberry Pi. The Pi 4 required a lot of learning about linux and debian distros and how to set up and operate them. <br>Along side this it was my first time using MicroPython and the Thonny IDE. This took some getting used to and how to interact with GPIO pins and the board itself.</p>
+        <p>Inside MicroPython I had to build out my first proper Tkinter GUI outside of little calculators and password entry pages. Creating a fully funtional GUI with updating labels, buttons that sent actions to the servos and Matplotlib graphs to read in and display the servo positions over time.</p>
+        <span class="project-titles">What to improve for next time:</span>
+
+
+        <p><br>There are a number of things I would improve for next time:</p>
+        <p>I would improve the connection between the teeth of the gears connected to the servos and the central shafts. There was a lot of backlash on these teeth and did not connect together very easily. Causing teeth to often become misaligned and snag, which caused the system to stop spinning.</p>
+        <p>I would also like to work on the speed at which the motors spin, I had the servos turing at full speed all of the time which caused the camera to look quite jerky when moving around, not giving the best image. On top of this solidifying the backlash in the teeth and securing the joints better, potentially using bearings would allow for much smoother movements.</p>
+        <p>I would like to work on minimsing the connections needed for the board. I would like to create a housing to store the Raspberry Pi and see if I can reduce the board itself and use something like a pico to fit in the smaller form factor and instead of running a Tkinter app I would sun some kind of Http server using an ethernet controller board that you could connect using a configurable IP address.</p>
+        <p>In trying to make the design smaller I would like to power it over POE, I would probably use a POE splitter to detatch the power from the data connection. There would likely need to be alot of work done on power and how much is needed and how much a POE switch can deliver and potentially would need to look at other designs or motors, but I imagine it could be done.</p>
+
+
+
+
+        <p><br>This Spherical Parallel Manipulator was originally printed with all of the parts from the original model by plusalphaDesigns (See the second last photo). From there changes and alterations were made to improve the build to make it more efficient and suited to my needs, as well as a whole new control system using a Raspberry Pi.</p>
         <p>What was kept the same:</p>
         <p>The central gears and all three sets of links were kept the same from the initial build, as no real big changes could be made for these parts without massively changing the designs to put in bearings to help reduce friction. </p>
         <p>As well as this all of the pins were kept the same.</p>
@@ -388,7 +653,7 @@
         <p>The use of Nylock nuts to stop the nuts on the joints coming loose that seemed to happen often. </p>
         <p>The Top Stage was redesigned by measuring the 3D print and 3D modelling one exactly the same size as it to allow it to fit onto the original links. Then a cut was made into it the same size as the camera used in the build to allow it to sit in nicely, with a hole in the bottom to allow the camera to be screwed in. The camera used can be found here. </p>
         <a href="https://www.amazon.co.uk/gp/product/B07RXYG295/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1" target="_blank">Amazon Link to Camera </a>
-        <p>The original build had a 1:1 gear ratio, in this build this was changed to a 2:1 ratio to improve the torque in the system and allow it to comfortably carry more load. By keeping the central gears the same size and then reducing the diameter of the servo gears from the original 40mm down to 20mm this gear ratio was achieved.</p>
+        <p><br>The original build had a 1:1 gear ratio, in this build this was changed to a 2:1 ratio to improve the torque in the system and allow it to comfortably carry more load. By keeping the central gears the same size and then reducing the diameter of the servo gears from the original 40mm down to 20mm this gear ratio was achieved.</p>
         <p>With the newly designed base, this made room for some more changes. The large triangular base made the design more sturdy and unlikely to tip, as well as allowing for an arrow on one corner to be made to show which way the base and the system should face. With the new smaller servo gears, the servo mount brackets had to be moved closer to the central gear shaft to allow for this smaller diameter. Some calibration markers also were added, this allowed the servo gears to be set at a zero point and then give an easy visual aid as to where the gear has moved.</p>
         <p>As well as this, all links that touched eachother had metal washers added to them and were sanded down to try and reduce friction and make the system as smooth as possible</p>
         <p>Certain parts such as the motor brackets and gears heights were slightly lowered to make the gears all line up more flush to stop any gears getting caught.</p>
@@ -396,12 +661,76 @@
         <p>All of the electronics were controlled by a Raspberry Pi 4, however a Raspberry Pi 2 or 3 should work perfectly fine for this purpose. The 3 servos were powered from an external power supply. An app on Tkinter was created to control the servos directions and movements as well as relay back real time data on the servo positions. To get this data back into the RPI, an MCP3008 ADC was used to convert the signal from the analog feedback pin of the servo to a digital signal for the RPI to take in. This data was then presented in number format as well as graphically for each servo.</p>
         <p>The electrical schematic can be seen in the last photo. </p>
         <p>A video of the system working with the app at the same time can be found here: <a href="https://vimeo.com/726521642" target="_blank">Vimeo Link</a></p>
-        <p>The python code for the Raspberry Pi has been included, a number of libraries seen at the top of the code have to be downloaded. </p>
-        <p>What to print:</p>
-        <p>As well as the things mentioned above from the original build that need printed off, you will also need. </p>
-        <p>- Redesigned Base<br>- Redesigned Top Platform<br>- Calibration Marker : 3ea<br>- Smaller Gear : 3ea</p>
+        <p>The python code for the Raspberry Pi can be found here or on my GitHub: <a href="documents/SPM/Raspberry_Pi_Code.py" target="_blank">Python Code</a></p>
+        <p>A link to a technical report written up about this project can be found here: <a href="documents/SPM/Final Report.pdf" target="_blank">Technical Report</a></p>
+        
         
       </div>
+
+      <div class="side-images side-left">
+        <figure class="side-figure" style="--top: 220px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/spm_header.webp" alt="...">
+          <figcaption>Spherical Parallel Manipulator & Breadboard</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 670px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/System Side.webp" alt="...">
+          <figcaption>SPM, Breadboard & Power Supply</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1120px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/System Top.webp" alt="...">
+          <figcaption>SPM Top View</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1570px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/System Angle 1.webp" alt="...">
+          <figcaption>SPM, Breadboard & Raspberry Pi</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 2160px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/System End On.webp" alt="...">
+          <figcaption>SPM Side View</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 2850px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/System Front 6.webp" alt="...">
+          <figcaption>SPM Front View</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 3550px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/System Front 7.webp" alt="...">
+          <figcaption>SPM Whole System</figcaption>
+        </figure>
+        
+      </div>
+
+      <div class="side-images side-right">
+        <figure class="side-figure" style="--top: 220px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/Camera Top 3.webp" alt="...">
+          <figcaption>SPM Top View with Camera</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 840px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/Gear 4.webp" alt="...">
+          <figcaption>SPM Gear Link</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1320px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/Gear 1.webp" alt="...">
+          <figcaption>SPM Individual Driver Gear</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 1820px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/Link 1.webp" alt="...">
+          <figcaption>SPM Linkage 1</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 2460px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/Link 5.webp" alt="...">
+          <figcaption>SPM Linkage 2</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 2920px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/Base 3.webp" alt="...">
+          <figcaption>SPM Base</figcaption>
+        </figure>
+        <figure class="side-figure" style="--top: 3460px; --w: 380px; --x: -20px;">
+          <img src="images/SPM/System Front 1.webp" alt="...">
+          <figcaption>SPM System Front View</figcaption>
+        </figure>
+      </div>
+
+
     </div>
   </div>
 

@@ -6,6 +6,20 @@
   --accent: #C8401A;
   --mid: #888880;
   --border: rgba(0,0,0,0.12);
+
+  /* ── Status badge colours (customise here) ── */
+  --status-complete-bg: rgba(40, 167, 69, 0.15);
+  --status-complete-color: #2e8b40;
+  --status-progress-bg: rgba(230, 162, 23, 0.18);
+  --status-progress-color: #b5780f;
+
+  /* ── Project details column widths (customise here) ── */
+  --status-col-width: 0.7fr;
+  --year-col-width: 0.7fr;
+  --tools-col-width: 2.4fr;
+
+  /* ── Project page overall width (customise here) ── */
+  --project-max-width: 900px;
 }
 
 /* ── Reset & Base ── */
@@ -124,7 +138,7 @@ body {
   font-size: 13px;
   line-height: 1.7;
   color: var(--subColor);
-  max-width: 360px;
+  max-width: 660px;
 }
 
 /* ── Skills Section ── */
@@ -315,7 +329,7 @@ body {
 }
 
 .project-card:hover .card-image {
-  height: 110px;
+  max-height: 130px;
   opacity: 1;
 }
 
@@ -340,7 +354,8 @@ body {
 
 /* ── PROJECT PAGE ── */
 .project-layout {
-  max-width: 680px;
+  position: relative;  
+  max-width: var(--project-max-width);
   margin: 0 auto;
   padding: 80px 32px 80px;
 }
@@ -406,22 +421,32 @@ body {
 
 .project-details {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--cardBorder);
+  grid-template-columns: var(--status-col-width) var(--year-col-width) var(--tools-col-width);
+  gap: 0;
   border: 1px solid var(--cardBorder);
   border-radius: 6px;
   overflow: hidden;
 }
 
+.project-titles {
+  
+  font-size: 16px;
+  font-weight: 900;
+}
+
 .detail-block {
   background: var(--detailBg);
-  padding: 18px 20px;
+  padding: 15px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* align content to top */
   text-align: center;
+  border-right: 1px solid var(--cardBorder);
+}
+
+.detail-block:last-child {
+  border-right: none;
 }
 
 .detail-label {
@@ -429,7 +454,10 @@ body {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--subColor);
-  margin-bottom: 6px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--cardBorder);
 }
 
 .contact-links a{ 
@@ -440,21 +468,39 @@ body {
 .detail-value {
   font-size: 13px;
   font-weight: 700;
+  margin-top: 8px;
   color: var(--fontColor);
+}
+
+/* ── Status Badges ── */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.status-complete {
+  background: var(--status-complete-bg);
+  color: var(--status-complete-color);
+}
+
+.status-progress {
+  background: var(--status-progress-bg);
+  color: var(--status-progress-color);
 }
 
 .card-image {
   width: 180px;
-  height: 0;
+  max-height: 0;
   opacity: 0;
-
   object-fit: cover;
   border-radius: 14px;
   display: block;
-
-  transition:
-    height 0.35s ease,
-    opacity 0.35s ease;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
 }
 
 .project-image {
@@ -475,6 +521,64 @@ body {
   display: flex;
   align-items: center;
   gap: 0;
+}
+
+/* ── Side images on project pages ── */
+.side-images {
+  position: absolute;
+  top: 0;
+  bottom: 0;                       /* column spans the full page height so each image can go anywhere in it */
+  width: 220px;
+  pointer-events: none;            /* empty column space doesn't block clicks on the text */
+}
+
+.side-left  { right: 100%; margin-right: 24px; }
+.side-right { left: 100%;  margin-left: 24px; }
+
+.side-figure {
+  position: absolute;
+  top: var(--top, 280px);          /* distance from the top of the page content */
+  width: var(--w, 100%);           /* defaults to the column width (220px) */
+  transform: translateX(var(--x, 0px));   /* positive = right, negative = left */
+  pointer-events: auto;
+}
+
+/* Keep the gap to the text constant: left images hug the text, right images too */
+.side-left  .side-figure { right: 0; }
+.side-right .side-figure { left: 0; }
+
+.side-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.side-figure figcaption {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--subColor);
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+/* Not enough gutter space on smaller screens: stack under the text instead */
+@media (max-width: 1400px) {
+  .side-images {
+    position: static;
+    width: 100%;
+    margin: 32px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    pointer-events: auto;
+  }
+  .side-figure {
+    position: relative;   /* was: static */
+    width: 100%;
+    transform: none;
+  }
 }
 
 /* ── Page Transitions ── */
@@ -511,4 +615,12 @@ body {
   .home-right {
     position: static;
   }
+}
+
+#page-pinger {
+  padding-bottom: 480px;
+}
+
+#page-lipo {
+  padding-bottom: 480px;
 }
